@@ -96,7 +96,7 @@ Halvah marzipan bonbon marshmallow powder sweet roll ice cream. Chupa chups cand
   end
 
   def self.posts_by_author(author_last_name)
-    all.select{|post| post.author.last_name == author_last_name}.sort_by{|post| post.created_at}.reverse!
+    all.select{|post| post.author.last_name == author_last_name}.sort_by{|post| post.created_at}
   end
 
 end

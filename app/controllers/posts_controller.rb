@@ -5,6 +5,12 @@ class PostsController < ApplicationController
     @subheading = "A blogging medium for your favorite authors who have already kicked the bucket."
   end
 
+  def show_first
+    @post = Post.all.first
+    @title = @post.title
+    @subheading = @post.summary
+  end
+
   def show
     @post = Post.find(params[:id].to_i)
     @title = @post.title

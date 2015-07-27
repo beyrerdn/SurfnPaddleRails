@@ -3,7 +3,7 @@
   </div>
   <div class="author-info">
     <h3 class="author-title">
-        <%= author.show_name %>
+        <%=link_to author.show_name, author_posts_path(:last_name => author.last_name) %>
     </h3>
     <p class="author-bio">
         <%= author.bio %>
